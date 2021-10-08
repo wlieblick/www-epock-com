@@ -1,0 +1,54 @@
+
+
+<span style="font-size: 3em; color: blue;">
+	Elliot's Cute Page of Dogs
+</span>
+
+<br />Second Line
+<br />Third Line
+<p style="padding: 10px; width: 100px; border: 10px dashed black;">Fourth Line</p>
+
+
+<button id="btnShowDogToggle" onclick="toggleDogDisplay()">Show Dog</button>
+
+<!--
+<button id="btnShowDog" onclick="showDogClickEvent()">Show Dog</button>
+<button id="btnHideDog" style="visibility: hidden;" onclick="hideDogClickEvent()">Hide Dog</button>
+-->
+
+<br />
+<img id="dogPic" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*" 
+style="visibility: hidden;" />
+
+
+
+<script>
+var dogDisplay = 0;
+
+function toggleDogDisplay(){
+
+	if (dogDisplay == 0){
+		document.getElementById("dogPic").style.visibility = "visible";
+		document.getElementById("btnShowDogToggle").innerText = "Hide Dog";
+		dogDisplay = 1;
+	}
+	else {
+		document.getElementById("dogPic").style.visibility = "hidden";
+		document.getElementById("btnShowDogToggle").innerText = "Show Dog";
+		dogDisplay = 0;
+	}
+}
+
+function hideDogClickEvent() {
+	document.getElementById("dogPic").style.visibility = "hidden";
+	document.getElementById("btnHideDog").style.visibility = "hidden";
+	document.getElementById("btnShowDog").style.visibility = "visible";
+}
+function showDogClickEvent() {
+	
+	document.getElementById("dogPic").style.visibility = "visible";
+	document.getElementById("btnHideDog").style.visibility = "visible";
+	document.getElementById("btnShowDog").style.visibility = "hidden";
+	//alert(document.getElementById("dogPic").style.visibility);	
+}
+</script>
